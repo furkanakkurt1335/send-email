@@ -5,7 +5,14 @@ Script to send emails by smtp
 ## Usage
 
 ```bash
-python3 main.py --sender <sender email address> --password <password> --receiver <receiver email address> --subject <subject> --body <body> --port <port number> --smtp <smtp server address>
+python3 main.py \
+--sender <sender email address> \
+--password <password> \
+--receiver <receiver email address> \
+--subject <subject> \
+--body <body> \
+--port <port number> \
+--smtp <smtp server address>
 ```
 
 None of the flags are required. If not provided, the script will ask for the missing information. If port or smtp is not provided, the script will use the default values for Gmail, which are 465 and smtp.gmail.com respectively.

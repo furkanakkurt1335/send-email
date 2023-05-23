@@ -51,6 +51,6 @@ Subject: {subject}
 context = ssl.create_default_context()
 
 with smtplib.SMTP_SSL(host=smtp, port=port, context=context) as server:
-    server.login(sender, password)
-    server.sendmail(sender, receiver, message)
+    server.login(user=sender, password=password)
+    server.sendmail(from_addr=sender, to_addrs=receiver, msg=message)
     print('Mail sent successfully')
